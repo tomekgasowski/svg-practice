@@ -3,6 +3,8 @@
 @import "_variables";
 @import "modules/hello.scss";
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 body {
   background: $wtf;
   color: #fff;
@@ -10,4 +12,71 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.button {
+  width: 216px;
+  height: 47px;
+  &__add {
+    font-size: 18px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+  }
+  &__remove {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+    font-size: 14px;
+    color: #F5E5E7;
+  }
+}
+
+.glass {
+  position: relative;
+  margin-bottom: 48px;
+  &__counter {
+    position: absolute;
+    color: black;
+    font-size: 112px;
+    top: 117px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+.header {
+  font-size: 55px;
+  margin: 87px auto 68px;
+}
+
+
+.wata {
+  animation: pathAnim 4s cubic-bezier(0.55, 0.1, 0.44, 0.91) infinite;
+}
+
+@keyframes pathAnim {
+  0%{
+    d: path("M221.5 69L202 262.5H78L60 83C94 87.6253 104.5 87.3419 139.46 77.9292C166.395 70.6773 185.04 66.1534 221.5 69Z")
+  }
+  50%{
+    d: path("M220 84L202 263.215H78.5L59.5 74.5C93.2861 70.0324 103.5 70 140.316 79.073C180.075 88.8715 197.772 86.482 220 84Z")
+  }
+  100%{
+    d: path("M221.5 69L202 262.5H78L60 83C94 87.6253 104.5 87.3419 139.46 77.9292C166.395 70.6773 185.04 66.1534 221.5 69Z")
+  }
+}
+
+

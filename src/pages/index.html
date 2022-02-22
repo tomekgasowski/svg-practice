@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -145,9 +145,31 @@
     />
   </head>
   <body>
-    <div class="hello">
-      <img class="hello__logo" src="../assets/img/logo.svg" alt="WTF " />
-      <span class="hello__circles"></span>
-    </div>
+    <main class="main">
+      <h1 class="header">Wodiczka</h1>
+      <div class="glass">
+        <span class="glass__counter glass__counter--js">0</span>
+        <svg
+          class="szklana"
+          width="280"
+          height="280"
+          viewBox="0 0 280 280"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M242.748 2.8875C241.085 1.05 238.74 0 236.255 0H43.7555C41.288 0 38.9255 1.05 37.263 2.8875C35.618 4.7075 34.7955 7.1575 35.0405 9.625L61.2905 272.125C61.7455 276.605 65.508 280 70.0055 280H210.005C214.503 280 218.265 276.605 218.703 272.125L244.953 9.625C245.215 7.1575 244.41 4.7075 242.748 2.8875Z"
+            fill="#ECEFF1"
+          />
+          <path
+            class="wata"
+            d="M221.5 69L202 262.5H78L60 83C94 87.6253 104.5 87.3419 139.46 77.9292C166.395 70.6773 185.04 66.1534 221.5 69Z"
+            fill="#2196F3"
+          />
+        </svg>
+      </div>
+      <button class="button button__add button__add--js">dodaj szklankę</button>
+      <button class="button button__remove button__remove--js">odejmij szklankę</button>
+    </main>
   </body>
 </html>

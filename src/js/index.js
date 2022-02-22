@@ -6,4 +6,22 @@ import '../scss/main.scss';
 
 /* place your code below */
 
-console.log('HELLO 🚀')
+const counter = document.querySelector('.glass__counter--js');
+const addButton = document.querySelector('.button__add--js');
+const removeButton = document.querySelector('.button__remove--js');
+
+let glassNumber = ''
+
+addButton.addEventListener('click', () => {
+    if (glassNumber < 99) {
+        glassNumber++
+        counter.innerHTML = glassNumber;
+    }
+});
+
+removeButton.addEventListener('click', () => {
+    if (glassNumber > 0) {
+        glassNumber--;
+        counter.innerHTML = glassNumber;
+    }
+})
